@@ -36,7 +36,8 @@
 				<blockquote>
 					<p>
 						This is my brand new, shiny website! I just registered
-						the domain <span id="domainTime">... minutes ago</span>,
+						the domain
+						<span id="resigtrationTime">... minutes ago</span>,
 						using a grant from
 						<a href="https://tagless.hackclub.com/">Tagless</a>,
 						which you should totally check out :D
@@ -46,9 +47,10 @@
 		</main>
 
 		<script>
-			const domainTime = document.getElementById("domainTime");
+			const resigtrationTime =
+				document.getElementById("resigtrationTime");
 
-			const RESIGTRATION_TIME = 1791229428148;
+			const RESIGTRATION_TIMESTAMP = 1791229428148;
 
 			/** this function was made by ai */
 			function formatRelativeTime(ms) {
@@ -72,13 +74,14 @@
 				}
 			}
 
-			console.log(Date.now());
-
-			setInterval(() => {
-				const delta = RESIGTRATION_TIME - Date.now();
+			function updateRegistrationTime() {
+				const delta = RESIGTRATION_TIMESTAMP - Date.now();
 				const text = formatRelativeTime(delta);
-				domainTime.textContent = text;
-			}, 1000);
+				resigtrationTime.textContent = text;
+			}
+
+			setInterval(() => updateRegistrationTime(), 1000);
+			updateRegistrationTime();
 		</script>
 	</body>
 </html>
