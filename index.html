@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ethan Marks</title>
+
+		<link rel="stylesheet" href="https://unpkg.com/normalize.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/magick.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/book-header.css"
+		/>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Ethan Marks</h1>
+				<nav>
+					<ul>
+						<li>
+							<a href="https://github.com/ethmarks">GitHub</a>
+						</li>
+						<li>
+							<a href="mailto:ethmarks.dev@gmail.com">Email</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<section>
+				<h2 style="text-align: center">Ahoy!</h2>
+
+				<blockquote>
+					<p>
+						This is my brand new, shiny website! I just registered
+						the domain <span id="domainTime">... minutes ago</span>,
+						using a grant from
+						<a href="https://tagless.hackclub.com/">Tagless</a>,
+						which you should totally check out :D
+					</p>
+				</blockquote>
+			</section>
+		</main>
+
+		<script>
+			const domainTime = document.getElementById("domainTime");
+
+			const RESIGTRATION_TIME = 1791229428148;
+
+			/** this function was made by ai */
+			function formatRelativeTime(ms) {
+				const seconds = Math.round(ms / 1000);
+				const minutes = Math.round(seconds / 60);
+				const hours = Math.round(minutes / 60);
+				const days = Math.round(hours / 24);
+
+				const rtf = new Intl.RelativeTimeFormat("en", {
+					numeric: "auto",
+				});
+
+				if (Math.abs(seconds) < 60) {
+					return rtf.format(seconds, "second");
+				} else if (Math.abs(minutes) < 60) {
+					return rtf.format(minutes, "minute");
+				} else if (Math.abs(hours) < 24) {
+					return rtf.format(hours, "hour");
+				} else {
+					return rtf.format(days, "day");
+				}
+			}
+
+			console.log(Date.now());
+
+			setInterval(() => {
+				const delta = RESIGTRATION_TIME - Date.now();
+				const text = formatRelativeTime(delta);
+				domainTime.textContent = text;
+			}, 1000);
+		</script>
+	</body>
+</html>
