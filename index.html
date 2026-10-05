@@ -65,10 +65,8 @@
 
 				if (Math.abs(seconds) < 60) {
 					return rtf.format(seconds, "second");
-				} else if (Math.abs(minutes) < 60) {
-					return rtf.format(minutes, "minute");
 				} else if (Math.abs(hours) < 24) {
-					return rtf.format(hours, "hour");
+					return rtf.format(minutes, "minute");
 				} else {
 					return rtf.format(days, "day");
 				}
