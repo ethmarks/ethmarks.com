@@ -9,6 +9,7 @@ import terser from "lume/plugins/terser.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
 import inline from "lume/plugins/inline.ts";
 import svgo from "lume/plugins/svgo.ts";
+import jsx from "lume/plugins/jsx.ts";
 
 import markdown from "lume/plugins/markdown.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
@@ -29,6 +30,7 @@ export default () => (site: Lume.Site) => {
   site.use(inline());
   site.use(readingInfo());
   site.use(imageSize());
+  site.use(jsx());
   site.use(markdown({
     plugins: [
       anchorPlugin,

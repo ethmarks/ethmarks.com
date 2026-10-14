@@ -1,50 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+---
+layout: "base.vto"
+assets: ["normalize.css", "magick.css", "book-header.css", "styles.css", "home.js"]
+---
 
-    <title>Ethan Marks</title>
-    <meta name="description" content="Ahoy!" />
-    <link rel="canonical" href="https://ethmarks.com/" />
-    <link rel="icon" href="favicon.ico" />
+<main>
+  <header>
+    <h1>Ethan Marks</h1>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/ethmarks">GitHub</a></li>
+        <li><a id="email">Email</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2 style="text-align: center">Ahoy!</h2>
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ethan Marks" />
-    <meta property="og:description" content="Ahoy!" />
-    <meta property="og:url" content="https://ethmarks.com/" />
-    <meta property="og:site_name" content="Ethan Marks" />
-    <meta property="og:image" content="/banner.png" />
-
-    <script src="./js/home.js" defer></script>
-    <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/magick.css" />
-    <link rel="stylesheet" href="./css/book-header.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <main>
-      <header>
-        <h1>Ethan Marks</h1>
-        <nav>
-          <ul>
-            <li><a href="https://github.com/ethmarks">GitHub</a></li>
-            <li><a id="email">Email</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section>
-        <h2 style="text-align: center">Ahoy!</h2>
-
-        <blockquote>
-          <p>
-            This is my brand new, shiny website! I just registered the domain
-            <span id="resigtrationTime">... days ago</span>, using a grant from
-            <a href="https://tagless.hackclub.com/">Tagless</a>, which you
-            should totally check out :D
-          </p>
-        </blockquote>
-      </section>
-    </main>
-  </body>
-</html>
+    <blockquote>
+      <p>
+        This is my brand new, shiny website! I just registered the domain
+        <span id="resigtrationTime">... days ago</span>, using a grant from
+        <a href="https://tagless.hackclub.com/">Tagless</a>, which you should
+        totally check out :D
+      </p>
+    </blockquote>
+  </section>
+</main>

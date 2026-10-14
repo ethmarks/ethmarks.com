@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ethan Marks</title>
+    <meta name="description" content="Ahoy!" />
+    <link rel="canonical" href="https://ethmarks.com/" />
+    <link rel="icon" href="favicon.ico" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ethan Marks" />
+    <meta property="og:description" content="Ahoy!" />
+    <meta property="og:url" content="https://ethmarks.com/" />
+    <meta property="og:site_name" content="Ethan Marks" />
+    <meta property="og:image" content="/img/banner.png" />
+
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      type="image/x-icon"
+    />
+
+    {{ for asset of assets }}
+      {{ comp.loadAsset({ asset }) }}
+    {{ /for }}
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
