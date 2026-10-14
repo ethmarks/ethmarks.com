@@ -6,6 +6,7 @@ import imageSize from "lume/plugins/image_size.ts";
 
 //import minifyHTML from "lume/plugins/minify_html.ts";
 import terser from "lume/plugins/terser.ts";
+import lightningCss from "lume/plugins/lightningcss.ts";
 import inline from "lume/plugins/inline.ts";
 import svgo from "lume/plugins/svgo.ts";
 
@@ -17,13 +18,10 @@ import collapsiblePlugin from "npm:markdown-it-collapsible@^2.0.2";
 import katexPlugin from "npm:markdown-it-katex@^2.0.3";
 
 export default () => (site: Lume.Site) => {
-  // Adds
-  site.add("assets/banner.png", "banner.png");
-  site.add("assets/favicon.ico", "favicon.ico");
-
   // Plugins
   site.use(terser());
   site.use(sass());
+  site.use(lightningCss());
   site.use(svgo());
   //site.use(minifyHTML());
   site.use(picture());
@@ -46,4 +44,8 @@ export default () => (site: Lume.Site) => {
       typographer: true,
     },
   }));
+
+  ["favicon.ico", "css", "js", "img"].forEach((from) =>
+    site.add(`assets/${from}`, from)
+  );
 };
