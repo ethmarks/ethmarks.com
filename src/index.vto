@@ -1,97 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Ethan Marks</title>
-		<meta name="description" content="Ahoy!" />
-		<link rel="canonical" href="https://ethmarks.com/" />
-		<link rel="icon" href="favicon.ico" />
+    <title>Ethan Marks</title>
+    <meta name="description" content="Ahoy!" />
+    <link rel="canonical" href="https://ethmarks.com/" />
+    <link rel="icon" href="favicon.ico" />
 
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Ethan Marks" />
-		<meta property="og:description" content="Ahoy!" />
-		<meta property="og:url" content="https://ethmarks.com/" />
-		<meta property="og:site_name" content="Ethan Marks" />
-		<meta property="og:image" content="/banner.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ethan Marks" />
+    <meta property="og:description" content="Ahoy!" />
+    <meta property="og:url" content="https://ethmarks.com/" />
+    <meta property="og:site_name" content="Ethan Marks" />
+    <meta property="og:image" content="/banner.png" />
 
-		<link rel="stylesheet" href="https://unpkg.com/normalize.min.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/magick.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/book-header.css"
-		/>
-	</head>
-	<body>
-		<main>
-			<header>
-				<h1>Ethan Marks</h1>
-				<nav>
-					<ul>
-						<li>
-							<a href="https://github.com/ethmarks">GitHub</a>
-						</li>
-						<li>
-							<!-- prettier-ignore -->
-							<script>document.currentScript.outerHTML = '<a href="mailto:'+'e'+'t'+'h'+'m'+'a'+'r'+'k'+'s'+'.'+'d'+'e'+'v'+'@'+'g'+'m'+'a'+'i'+'l'+'.'+'c'+'o'+'m'+'">Email</a>';</script>
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<section>
-				<h2 style="text-align: center">Ahoy!</h2>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/magick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/wintermute-cell/magick.css/book-header.css"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Ethan Marks</h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="https://github.com/ethmarks">GitHub</a>
+            </li>
+            <li>
+              <script>
+              document.currentScript.outerHTML = "<a href=\"mailto:" + "e" + "t"
+                + "h" + "m" + "a" + "r" + "k" + "s" + "." + "d" + "e" + "v"
+                + "@" + "g" + "m" + "a" + "i" + "l" + "." + "c" + "o" + "m"
+                + "\">Email</a>";
+              </script>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <h2 style="text-align: center">Ahoy!</h2>
 
-				<blockquote>
-					<p>
-						This is my brand new, shiny website! I just registered
-						the domain
-						<span id="resigtrationTime">... minutes ago</span>,
-						using a grant from
-						<a href="https://tagless.hackclub.com/">Tagless</a>,
-						which you should totally check out :D
-					</p>
-				</blockquote>
-			</section>
-		</main>
+        <blockquote>
+          <p>
+            This is my brand new, shiny website! I just registered the domain
+            <span id="resigtrationTime">... days ago</span>, using a grant from
+            <a href="https://tagless.hackclub.com/">Tagless</a>, which you
+            should totally check out :D
+          </p>
+        </blockquote>
+      </section>
+    </main>
 
-		<script>
-			const resigtrationTime =
-				document.getElementById("resigtrationTime");
+    <script>
+    const resigtrationTime = document.getElementById("resigtrationTime");
 
-			const RESIGTRATION_TIMESTAMP = 1791229428148;
+    const RESIGTRATION_TIMESTAMP = 1791229428148;
 
-			/** this function was made by ai */
-			function formatRelativeTime(ms) {
-				const seconds = Math.round(ms / 1000);
-				const minutes = Math.round(seconds / 60);
-				const hours = Math.round(minutes / 60);
-				const days = Math.round(hours / 24);
+    /** this function was made by ai */
+    function formatRelativeTime(ms) {
+      const seconds = Math.round(ms / 1000);
+      const minutes = Math.round(seconds / 60);
+      const hours = Math.round(minutes / 60);
+      const days = Math.round(hours / 24);
 
-				const rtf = new Intl.RelativeTimeFormat("en", {
-					numeric: "auto",
-				});
+      const rtf = new Intl.RelativeTimeFormat("en", {
+        numeric: "auto",
+      });
 
-				if (Math.abs(seconds) < 60) {
-					return rtf.format(seconds, "second");
-				} else if (Math.abs(hours) < 24) {
-					return rtf.format(minutes, "minute");
-				} else {
-					return rtf.format(days, "day");
-				}
-			}
+      if (Math.abs(seconds) < 60) {
+        return rtf.format(seconds, "second");
+      } else if (Math.abs(hours) < 24) {
+        return rtf.format(minutes, "minute");
+      } else {
+        return rtf.format(days, "day");
+      }
+    }
 
-			function updateRegistrationTime() {
-				const delta = RESIGTRATION_TIMESTAMP - Date.now();
-				const text = formatRelativeTime(delta);
-				resigtrationTime.textContent = text;
-			}
+    function updateRegistrationTime() {
+      const delta = RESIGTRATION_TIMESTAMP - Date.now();
+      const text = formatRelativeTime(delta);
+      resigtrationTime.textContent = text;
+    }
 
-			setInterval(() => updateRegistrationTime(), 1000);
-			updateRegistrationTime();
-		</script>
-	</body>
+    setInterval(() => updateRegistrationTime(), 1000);
+    updateRegistrationTime();
+    </script>
+  </body>
 </html>
