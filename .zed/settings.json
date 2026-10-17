@@ -10,32 +10,18 @@
   },
   "languages": {
     "JavaScript": {
-      "language_servers": [
-        "deno",
-        "hackatime",
-        "!typescript-language-server",
-        "!vtsls",
-        "!eslint",
-      ],
+      "language_servers": ["dprint", "deno", "hackatime"],
       "formatter": "language_server",
     },
     "TypeScript": {
-      "language_servers": [
-        "deno",
-        "hackatime",
-        "!typescript-language-server",
-        "!vtsls",
-        "!eslint",
-      ],
+      "language_servers": ["dprint", "deno", "hackatime"],
       "formatter": "language_server",
     },
     "TSX": {
       "language_servers": [
+        "dprint",
         "deno",
         "hackatime",
-        "!typescript-language-server",
-        "!vtsls",
-        "!eslint",
       ],
       "formatter": "language_server",
     },
