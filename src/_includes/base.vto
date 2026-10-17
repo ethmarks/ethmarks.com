@@ -1,17 +1,10 @@
----
-title: "Ethan Marks"
-desc: "Ahoy!"
-siteTitle: "Ethan Marks"
-siteURL: "https://ethmarks.com/"
----
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ title }}</title>
+    <title>{{ siteTitle + (title ? ` - ${title}` : "") }}</title>
     <meta name="description" content="{{desc}}" />
     <link rel="canonical" href="{{siteURL}}" />
     <link rel="icon" href="favicon.ico" />
