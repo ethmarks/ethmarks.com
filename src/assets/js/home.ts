@@ -1,5 +1,8 @@
-const resigtrationTime = document.getElementById("resigtrationTime");
+import { insertEmail } from "./email.ts";
 
+const registrationTime = document.getElementById("registrationTime");
+
+// October 5, 2026
 const RESIGTRATION_TIMESTAMP = 1791229428148;
 
 function updateRegistrationTime() {
@@ -12,14 +15,10 @@ function updateRegistrationTime() {
 
   const text = rtf.format(days, "day");
 
-  resigtrationTime.textContent = text;
+  if (registrationTime) registrationTime.textContent = text;
 }
 
 setInterval(() => updateRegistrationTime(), 1000 * 60);
 updateRegistrationTime();
 
-/** @type {HTMLAnchorElement} */
-const id = document.getElementById("email");
-id.href = "mailto:" + "e" + "t" +
-  "h" + "m" + "a" + "r" + "k" + "s" + "." + "d" + "e" + "v" +
-  "@" + "g" + "m" + "a" + "i" + "l" + "." + "c" + "o" + "m";
+insertEmail();

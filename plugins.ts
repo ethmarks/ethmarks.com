@@ -5,7 +5,7 @@ import picture from "lume/plugins/picture.ts";
 import imageSize from "lume/plugins/image_size.ts";
 
 //import minifyHTML from "lume/plugins/minify_html.ts";
-import terser from "lume/plugins/terser.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
 import inline from "lume/plugins/inline.ts";
 import svgo from "lume/plugins/svgo.ts";
@@ -20,7 +20,11 @@ import katexPlugin from "npm:markdown-it-katex@^2.0.3";
 
 export default () => (site: Lume.Site) => {
   // Plugins
-  site.use(terser());
+  site.use(esbuild({
+    options: {
+      keepNames: false,
+    },
+  }));
   site.use(sass());
   site.use(lightningCss());
   site.use(svgo());
