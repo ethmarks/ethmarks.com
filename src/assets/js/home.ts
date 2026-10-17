@@ -1,4 +1,4 @@
-import { insertEmail } from "./email.ts";
+import { initEmail } from "./email.ts";
 
 const registrationTime = document.getElementById("registrationTime");
 
@@ -21,4 +21,4 @@ function updateRegistrationTime() {
 setInterval(() => updateRegistrationTime(), 1000 * 60);
 updateRegistrationTime();
 
-insertEmail();
+initEmail();
