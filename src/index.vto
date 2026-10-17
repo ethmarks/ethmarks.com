@@ -1,6 +1,6 @@
 ---
 layout: "base.vto"
-assets: ["normalize.css", "magick.css", "book-header.css", "styles.css", "home.js"]
+assets: ["normalize.css", "magick.css", "book-header.css", "home.css", "home.js"]
 ---
 
 <main>
@@ -13,16 +13,30 @@ assets: ["normalize.css", "magick.css", "book-header.css", "styles.css", "home.j
       </ul>
     </nav>
   </header>
-  <section>
-    <h2 style="text-align: center">Ahoy!</h2>
+  <section id="intro">
+    {{
+      `
+<span class="dropcap">Ahoy!</span>
+I'm Ethan Marks. I'm 16 years old, in my third year of dual-enrollment, and part of [Hack Club](https://hackclub.com). I am script-literate in [Elder Futhark](https://en.wikipedia.org/wiki/Elder_Futhark). I use a [Framework 13](https://frame.work/laptop13) with [Fedora](https://fedoraproject.org/) and [Zed](https://zed.dev). I'm just writing random factoids about myself to pad the paragraph so that I can see what it looks like with more text on it.
+      `
+      |> md
+    }}
+  </section>
 
-    <blockquote>
-      <p>
-        This is my brand new, shiny website! I just registered the domain
-        <span id="registrationTime">... days ago</span>, using a grant from
-        <a href="https://tagless.hackclub.com/">Tagless</a>, which you should
-        totally check out :D
-      </p>
-    </blockquote>
+  <section id="meta">
+    {{
+      `
+## About this site
+
+This is my personal website. Right now, it's still very very WIP. I'm actively working on it though; the most recent update was
+<time class="relativeTime" datetime="${new Date().toISOString()}"></time>.
+
+I've made a couple personal websites before ([v1](https://github.com/ethmarks/ethmarks.github.io) and [v2](https://github.com/ethmarks/personal-site-v2)) with 1,600+ commits between them, but this is my first time using a custom domain (which was a prize from [Tagless YSWS](https://tagless.hackclub.com) :D). Hopefully this one will be better than my previous sites, if for no other reason than because it's built with [Lume](https://lume.land), the objectively best SSG.
+
+In the future, expect an about me page, writeup pages for each of my
+projects, probably a blog, and lots of miscellaneous pages.
+   	`
+      |> md
+    }}
   </section>
 </main>

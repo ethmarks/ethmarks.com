@@ -6,6 +6,7 @@ import transformImages from "lume/plugins/transform_images.ts";
 
 // import minifyHTML from "lume/plugins/minify_html.ts";
 import esbuild from "lume/plugins/esbuild.ts";
+import gitInfo from "lume/plugins/git_info.ts";
 import inline from "lume/plugins/inline.ts";
 import jsx from "lume/plugins/jsx.ts";
 import lightningCss from "lume/plugins/lightningcss.ts";
@@ -35,6 +36,7 @@ export default () => (site: Lume.Site) => {
   site.use(readingInfo());
   site.use(imageSize());
   site.use(jsx());
+  site.use(gitInfo());
   site.use(markdown({
     plugins: [
       anchorPlugin,
