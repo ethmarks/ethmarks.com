@@ -1,4 +1,34 @@
 @font-face {
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+
+  // https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-VF.ttf
+  src: url("/fonts/RedHatText.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Red Hat Text";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+
+  // https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-Italic-VF.ttf
+  src: url("/fonts/RedHatText-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Zarathustra";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+
+  // https://github.com/lorene-cn/zarathustra-typeface
+  src: url("/fonts/Zarathustra.woff2") format("woff2");
+}
+
+@font-face {
   font-family: "Maple Mono";
   font-style: normal;
   font-weight: 100 800;
@@ -17,12 +47,7 @@
   src: url("/fonts/MapleMono-Italic.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Zarathustra";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-
-  // https://github.com/lorene-cn/zarathustra-typeface
-  src: url("/fonts/Zarathustra.woff2") format("woff2");
+:root {
+  --font-primary: "Red Hat Text", sans-serif;
+  --font-secondary: "Zarathustra", serif;
 }
