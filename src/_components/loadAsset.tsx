@@ -13,6 +13,15 @@ export default function Asset({ asset }: Props) {
     return <script src={`/js/${base}`} defer inline={inline}></script>;
   } else if (ext === "css") {
     return <link rel="stylesheet" href={`/css/${base}`} inline={inline} />;
+  } else if (ext === "woff2") {
+    return (
+      <link
+        rel="preload"
+        href={`/fonts/${base}`}
+        as="font"
+        type="font/woff2"
+      />
+    );
   } else {
     throw new Error(`invalid asset '${asset}'`);
   }

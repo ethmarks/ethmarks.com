@@ -52,5 +52,5 @@ export default () => (site: Lume.Site) => {
     },
   }));
 
-  ["favicon.ico", "css", "js", "img"].forEach((from) => site.add(`assets/${from}`, from));
+  ["favicon.ico", "css", "js", "img", "fonts"].forEach((from) => site.add(`assets/${from}`, from));
 };

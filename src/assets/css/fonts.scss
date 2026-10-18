@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Maple Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+
+  // https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono%5Bwght%5D-VF.woff2
+  src: url("/fonts/MapleMono.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Maple Mono";
+  font-style: italic;
+  font-weight: 100 800;
+  font-display: swap;
+
+  // https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono-Italic%5Bwght%5D-VF.woff2
+  src: url("/fonts/MapleMono-Italic.woff2") format("woff2");
+}
