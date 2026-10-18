@@ -22,7 +22,9 @@
       type="image/x-icon"
     />
 
-    {{ for asset of assets }}
+    {{
+      for asset of assets.flatMap((a) => a === "$defaults" ? defaultAssets : a)
+    }}
       {{ comp.loadAsset({ asset }) }}
     {{ /for }}
   </head>
