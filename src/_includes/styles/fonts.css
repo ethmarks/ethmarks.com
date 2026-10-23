@@ -4,7 +4,9 @@
   font-weight: 300 700;
   font-display: swap;
 
-  // https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-VF.ttf
+  /*
+  https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-VF.ttf
+  */
   src: url("/fonts/RedHatText.woff2") format("woff2");
 }
 
@@ -14,7 +16,9 @@
   font-weight: 300 700;
   font-display: swap;
 
-  // https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-Italic-VF.ttf
+  /**
+  https://github.com/RedHatOfficial/RedHatFont/blob/master/fonts/Proportional/RedHatText/variable/RedHatText-Italic-VF.ttf
+  */
   src: url("/fonts/RedHatText-Italic.woff2") format("woff2");
 }
 
@@ -24,7 +28,9 @@
   font-weight: 400;
   font-display: swap;
 
-  // https://github.com/lorene-cn/zarathustra-typeface
+  /**
+  https://github.com/lorene-cn/zarathustra-typeface
+  */
   src: url("/fonts/Zarathustra.woff2") format("woff2");
 }
 
@@ -34,7 +40,9 @@
   font-weight: 100 800;
   font-display: swap;
 
-  // https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono%5Bwght%5D-VF.woff2
+  /**
+  https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono%5Bwght%5D-VF.woff2
+  */
   src: url("/fonts/MapleMono.woff2") format("woff2");
 }
 @font-face {
@@ -43,7 +51,9 @@
   font-weight: 100 800;
   font-display: swap;
 
-  // https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono-Italic%5Bwght%5D-VF.woff2
+  /**
+  https://github.com/subframe7536/maple-font/blob/v7/woff2/var/MapleMono-Italic%5Bwght%5D-VF.woff2
+  */
   src: url("/fonts/MapleMono-Italic.woff2") format("woff2");
 }
 

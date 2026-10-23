@@ -1,4 +1,5 @@
 {
+  "$schema": "https://cdn.jsdelivr.net/gh/denoland/deno@2.9.8/cli/schemas/config-file.v1.json",
   "imports": {
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.3.2/",
     "lume/jsx-runtime": "https://cdn.jsdelivr.net/gh/oscarotero/ssx@0.1.15/jsx-runtime.ts"
